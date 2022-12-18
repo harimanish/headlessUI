@@ -1,7 +1,15 @@
 import { useState } from "react";
-
+import { Link, Route, Routes } from "react-router-dom";
+import Home from "./pages/home";
+import About from "./pages/about";
 function App() {
-    return <div className="bg-red-400 italic ">Hello world</div>;
+    return (
+        <>
+            <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/about" element={<About />} />
+            </Routes>
+        </>
+    );
 }
-
 export default App;
